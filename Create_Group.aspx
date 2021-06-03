@@ -17,10 +17,12 @@
 
        團名: <asp:TextBox ID="Group" runat="server"></asp:TextBox>  <br />   
        店名: <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList><br />
-       團圖: <asp:FileUpload ID="Upload" runat="server" />
-
+       團圖: <asp:FileUpload ID="Upload" runat="server" /><br />
+        <br />
         <asp:Button ID="OK" class="Create_btn" runat="server" Text="OK" OnClick="OK_Click" />
         <asp:Button ID="Reset" runat="server" Text="返回" OnClick="Reset_Click" />
+
+        <asp:Label ID="lbMsg" runat="server" ></asp:Label>
     </form>
 </body>
 </html>

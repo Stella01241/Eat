@@ -34,6 +34,19 @@ namespace WebApplication11
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(dt);
 
+            if(dt.Rows.Count > 0)
+            {
+                dropDownList.DataSource = dt;
+                //資料的值
+                dropDownList.DataValueField = "ShopID";
+                dropDownList.DataTextField = "ShopName";
+                dropDownList.DataValueField = "Shop_MenuID";
+                dropDownList.DataBind();
+                dropDownList.Items.Insert(0,"請選擇店家");
+                dropDownList.SelectedIndex = 0;
+
+            }
+            connection.Close();
         }
     }
 }
