@@ -13,5 +13,10 @@ namespace WebApplication11
         {
 
         }
+
+        protected void Btn_Create_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Create_Group.aspx");
+        }
     }
 }

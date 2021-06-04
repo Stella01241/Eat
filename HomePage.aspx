@@ -11,6 +11,7 @@
     <form id="form1" runat="server">
         <div>
             首頁
+            <asp:Button ID="Btn_Create" runat="server" Text="創團" OnClick="Btn_Create_Click" />
         </div>
     </form>
 </body>

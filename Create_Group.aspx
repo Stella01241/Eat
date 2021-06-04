@@ -9,6 +9,9 @@
         .Create_btn{
             margin-right: 30px;
         }
+        .err_Message{
+            color:red;
+        }
     </style>
     <title></title>
 </head>
@@ -19,10 +22,14 @@
        店名: <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList><br />
        團圖: <asp:FileUpload ID="Upload" runat="server" /><br />
         <br />
+        <div>
+        <asp:Image ID="ImageGroup" runat="server" Visible="false"  Width="150" Height="150"/>
         <asp:Button ID="OK" class="Create_btn" runat="server" Text="OK" OnClick="OK_Click" />
-        <asp:Button ID="Reset" runat="server" Text="返回" OnClick="Reset_Click" />
+        <asp:Button ID="Reset" runat="server" Text="Reset" OnClick="Reset_Click" />&emsp;
+        <asp:Button ID="Back" runat="server" Text="Back" OnClick="Back_Click" />
 
-        <asp:Label ID="lbMsg" runat="server" ></asp:Label>
+        <asp:Label ID="Err_Message" runat="server" CssClass="err_Message" Text=""></asp:Label>
+        </div>
     </form>
 </body>
 </html>
